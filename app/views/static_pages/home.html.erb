@@ -1,5 +1,14 @@
 <% provide(:title, "Home") %>
-<h1 style="text-align:center;">SNS APP</h1>
-<p>
-  <h2 style="color:red;font-size:30px;ext-align:center;">私は、素晴らしいアプリケーション開発を始めました。</h2>
-</p>
+
+  <% provide(:p, "じん") %>
+  <h1 style="text-align:center;">SNS APP</h1>
+  <div class="center jumbotron">
+  <h2>
+    This is the home page for the
+    <a href="#">Ruby on Rails Tutorial</a>
+    sample application.
+  </h2>
+
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+</div>
+
