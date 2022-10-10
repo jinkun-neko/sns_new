@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   def create  #newで送られたデータがcreateに来る。
     @user = User.new(user_params)
     if @user.save
+      log_in @user
       flash[:success] = "Welcome to the SNS APP!"
       redirect_to @user
     else
