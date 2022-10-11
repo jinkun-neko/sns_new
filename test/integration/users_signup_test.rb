@@ -22,6 +22,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     end
     follow_redirect!
     assert_template 'users/show'
+    assert_equal 'Example User is Welcome to the SNS APP!', flash[:success]
     assert is_logged_in?
   end
 end
